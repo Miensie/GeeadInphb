@@ -1,0 +1,199 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto 1.5rem;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-card {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.25rem;
+    background-color: #fff;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.navbar{
+    position: fixed; /* Fixe l'élément à l'écran */
+    top: 0;          /* Le place en haut */
+    left: 0;         /* Alignement à gauche */
+    width: 100%;     /* Prend toute la largeur */
+    z-index: 1000; 
+}
+
+nav{
+    background-color: rgb(59, 126, 59);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.navbar-brand{
+    color: white;
+    padding: 10px;
+}
+
+.navbar-brand:hover{
+    color: white;
+    padding: 10px;
+}
+
+.textre{
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 12px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.background-image {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bible.jpg');
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.btt{
+    border-radius: 30px;
+    background-color: rgb(59, 126, 59);
+    border-color:  rgb(59, 126, 59);
+    border-style:solid;
+    border-width: 3px; 
+    color: white;
+    font-size: 20px;
+}
+
+.content-container {
+    text-align: center;
+    z-index: 1;
+}
+
+.input-group{
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Ajuste selon la hauteur du navbar */
+    right: 6px; /* Ajuste la position horizontale */
+    z-index: 999; /* Assure l'affichage au-dessus */
+}
+
+.form-control{
+    border-radius: 30px;
+    border-color: rgb(59, 126, 59);
+    border-style:solid;
+    border-width: 3px;
+    height: 50px;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #1E1E1E;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.btn{
+    text-align: center;
+}
+
+.menu-btn {
+    background-color: rgb(59, 126, 59);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-btn:hover {
+    background-color: rgb(65, 114, 65);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.no-results {
+    text-align: center;
+    color: green;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
